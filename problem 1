@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int point = 10; //last number
+	int x = 3,y = 5; // 3 and 5
+	int sum; // sum of numbers that are multiples of 3 or 5
+	for (int i = 3; i < point; i++)
+	{
+		if (i % x == 0 || i % y == 0)
+			sum += i;
+	}
+	cout << sum << endl;
+	return 0;
+}
