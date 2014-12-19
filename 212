@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int number = 13195;
+	float point = sqrt(number);
+	int maxPrime = 0;
+	bool isPrime(int num);
+	vector<int> primeFactors;
+	
+	for (int i = 0; i < point; i++)
+		if (number % i == 0)
+			if(isPrime(i))
+				primeFactors.push_back(i);
+	for(vector<int>::iterator iter = primeFactors.begin(); iter != primeFactors.end(); iter++)
+	{
+		if (maxPrime < *iter)
+			maxPrime = *iter;
+	}
+	cout << maxPrime << endl;
+	
+	return 0;
+}
+
+isPrime(int num)
+{
+	bool flag = true;
+	for (int i = 1; i < num; num++)
+		if (num % i == 0)
+		{
+			flag = true;
+			break;
+		}
+		return flag;
+}
