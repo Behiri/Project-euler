@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a = 1, b = 2; // first two numbers
+	int temp;
+	long int sum = 0;
+	int point = 4000000;
+	
+	while (temp < point)
+	{
+		temp = a + b;
+		a = b;
+		b = temp;
+		if (temp % 2 == 0)
+			sum += temp;
+	}
+	cout << sum << endl;
+	return 0;
+}
