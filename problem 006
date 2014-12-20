@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const int point = 100;
+	int sumOfSqr = 0, sqrOfSum = 0, sum = 0;
+	
+	for (int i = 0; i <= point; i++)
+	{	
+		sumOfSqr += i*i;
+     	sum += i;
+	}
+		sqrOfSum = sum*sum;
+		cout << sqrOfSum - sumOfSqr << endl;
+	 return 0;
+}
