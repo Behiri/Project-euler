@@ -1,17 +1,17 @@
 #include <iostream>
 #include <vector>
-#include<cmath>
+#include <cmath>
 using namespace std;
+
+bool isPrime(long int num);
 
 int main()
 {
-	int number = 13195;
-	float point = sqrt(number);
-	int maxPrime = 0;
-	bool isPrime(int num);
+	long long int number = 600851475143;
+	long int maxPrime = 0;
 	vector<int> primeFactors;
 	
-	for (int i = 0; i < point; i++)
+	for (long int i = 2; i < sqrt(number); i++)
 		if (number % i == 0)
 			if(isPrime(i))
 				primeFactors.push_back(i);
@@ -25,13 +25,13 @@ int main()
 	return 0;
 }
 
-isPrime(int num)
+bool isPrime(long int num)
 {
 	bool flag = true;
-	for (int i = 1; i < num; num++)
+	for (int i = 2; i < sqrt(num); i++)
 		if (num % i == 0)
 		{
-			flag = true;
+			flag = false;
 			break;
 		}
 		return flag;
